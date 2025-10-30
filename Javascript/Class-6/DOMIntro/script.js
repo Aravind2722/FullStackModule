@@ -40,3 +40,9 @@ for (let item of items) {
 const para = document.querySelector('p');
 
 para.classList.add('para', 'a');
+console.log(para.textContent);
+console.log(para.innerText);
+console.log(para.innerHTML);
+
+const listItems = document.querySelectorAll('li');
+console.log(listItems);

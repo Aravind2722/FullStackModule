@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        .redPara {
+            background-color: red;
+        }
+        .greenPara {
+            background-color: green;
+        }
+    </style>
+  </head>
+  <body>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi dolores,
+      rerum repudiandae enim consectetur consequatur quae recusandae,
+      perferendis at quod illum, deleniti similique a eius nulla architecto
+      earum. Iure, deleniti.
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi dolores,
+      rerum repudiandae enim consectetur consequatur quae recusandae,
+      perferendis at quod illum, deleniti similique a eius nulla architecto
+      earum. Iure, deleniti.
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi dolores,
+      rerum repudiandae enim consectetur consequatur quae recusandae,
+      perferendis at quod illum, deleniti similique a eius nulla architecto
+      earum. Iure, deleniti.
+    </p>
+    <script>
+      const paras = document.querySelectorAll("p");
+
+      for (let para of paras) {
+        para.addEventListener("click", (event) => {
+          console.log(event);
+          const clicks = event.detail;
+          if (clicks === 1) para.className = "redPara";
+          else if (clicks === 2) para.className = "greenPara";
+          else if (clicks === 3) para.className = "";
+        });
+      }
+    </script>
+  </body>
+</html>
